@@ -20,6 +20,7 @@
         <module>companyArchitectureService</module>
         <module>employeeService</module>
         <module>netflixeurikaService</module>
+        <module>apiGateway</module>
     </modules>
 
     <properties>
