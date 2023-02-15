@@ -21,6 +21,7 @@
         <module>employeeService</module>
         <module>netflixeurikaService</module>
         <module>apiGateway</module>
+        <module>common</module>
     </modules>
 
     <properties>
