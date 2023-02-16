@@ -1,9 +1,11 @@
 package com.example.employeeService.controller;
 
 
+import com.example.common.events.TestEvent;
 import com.example.employeeService.dto.EmployeeDto;
 import com.example.employeeService.exceptions.BadRequestException;
 import com.example.employeeService.helpers.ResponseHandler;
+import com.example.employeeService.kafka.Producer;
 import com.example.employeeService.model.enums.UnitType;
 import com.example.employeeService.repositories.EmployeeRepo;
 import com.example.employeeService.responses.EmployeeResponse;
@@ -26,10 +28,13 @@ public class EmployeeController {
 
     private ResponseHandler responseHandler;
 
+    private Producer producer;
 
-    public EmployeeController(EmployeeService employeeService,ResponseHandler responseHandler) {
+
+    public EmployeeController(EmployeeService employeeService,ResponseHandler responseHandler,Producer producer) {
         this.employeeService = employeeService;
         this.responseHandler = responseHandler;
+        this.producer = producer;
     }
 
 
@@ -75,6 +80,17 @@ public class EmployeeController {
         }catch (Exception e){
             //Throw an exception
             throw new BadRequestException("There is no employee in the database with this id");
+        }
+    }
+
+    //Test Kafka
+    @GetMapping("/test")
+    public ResponseEntity<Object> testKafka(){
+        try {
+            producer.produce(new TestEvent());
+            return responseHandler.generateResponse("Kafka is working",HttpStatus.OK);
+        }catch (Exception e){
+            throw new BadRequestException("Kafka is not working");
         }
     }
 }
