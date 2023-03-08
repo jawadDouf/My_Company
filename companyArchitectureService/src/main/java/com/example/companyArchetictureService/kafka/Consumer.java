@@ -14,7 +14,9 @@ public class Consumer {
     //Receive Object from Kafka Topic
     @KafkaListener(topics = "testTopic", groupId = "test-consumer-group-id")
     public void consume(TestEvent testEvent) {
+
         System.out.println("Consumed message: " + testEvent.getMessage());
+        testEvent.setStatus("Consumed");
     }
 
 }

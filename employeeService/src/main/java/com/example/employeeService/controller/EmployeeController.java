@@ -87,7 +87,10 @@ public class EmployeeController {
     @GetMapping("/test")
     public ResponseEntity<Object> testKafka(){
         try {
-            producer.produce(new TestEvent());
+            TestEvent testEvent = null;
+           testEvent= producer.produce(new TestEvent());
+            System.out.println("Kafka is working"+testEvent.getStatus());
+
             return responseHandler.generateResponse("Kafka is working",HttpStatus.OK);
         }catch (Exception e){
             throw new BadRequestException("Kafka is not working");

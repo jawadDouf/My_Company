@@ -11,6 +11,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class TestEvent {
+
+    private String status;
     private String message="Hello World";
+
+
+
+
 
 }

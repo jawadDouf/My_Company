@@ -17,7 +17,8 @@ public class Producer {
 
 
     // Send Object to Kafka Topic
-    public void produce(TestEvent testEvent) {
+    public TestEvent produce(TestEvent testEvent) {
         kafkaTemplate.send("testTopic", testEvent);
+        return testEvent;
     }
 }

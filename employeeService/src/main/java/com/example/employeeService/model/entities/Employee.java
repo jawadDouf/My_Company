@@ -8,6 +8,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Table(name = "employees")
 @Data
@@ -43,6 +45,15 @@ public class Employee {
 
     @Column(nullable = false)
     private long idU;
+
+
+    @OneToMany(mappedBy = "sender")
+    private List<Message> messages;
+
+
+
+    @OneToMany(mappedBy = "id.employee")
+    private List<Employee_GroupChat> employee_groupChats;
 
 
 
