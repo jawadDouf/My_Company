@@ -53,4 +53,18 @@ public class EmployeeDto {
                 .build();
     }
 
+
+    //Convert entity to dto
+    public EmployeeDto to_dto(Employee employee){
+        return EmployeeDto.builder()
+                .id(employee.getId())
+                .first_name(employee.getFirst_name())
+                .last_name(employee.getLast_name())
+                .email(employee.getEmail())
+                .unit(employee.getUnit())
+                .password(employee.getPassword())
+                .idU(employee.getIdU())
+                .build();
+    }
+
 }
