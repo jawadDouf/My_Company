@@ -5,25 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02f30441-720b-4c16-805c-13684e365bee" name="Changes" comment="Add kafka and creat the first communication line between companyArchitectureService and employeeService">
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/events/companyUnitsEvents/UnitCreatedEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/events/helpers/UnitType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/kafka/producer/UnitsEventProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/kafka/consumer/UnitCreatedEventConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1178348c-113e-41e3-9fff-d7491530034f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1178348c-113e-41e3-9fff-d7491530034f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/SpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/SpaceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/kafka/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/kafka/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/services/SpaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/services/SpaceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/dto/ChatGroupDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/dto/ChatGroupDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/kafka/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/kafka/Producer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/entities/ChatGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/entities/ChatGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/entities/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/entities/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/ChatGroupRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/ChatGroupRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/services/ChatGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/services/ChatGroupService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +157,7 @@
       <workItem from="1679756932891" duration="4349000" />
       <workItem from="1679762432183" duration="1840000" />
       <workItem from="1679911408134" duration="689000" />
-      <workItem from="1679912287188" duration="1612000" />
+      <workItem from="1679912287188" duration="6336000" />
     </task>
     <task id="LOCAL-00001" summary="Link the microservices">
       <created>1675542154646</created>
