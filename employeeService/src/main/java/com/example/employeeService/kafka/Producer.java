@@ -9,16 +9,16 @@ import org.springframework.stereotype.Service;
 public class Producer {
 
 
-    private KafkaTemplate<String, TestEvent> kafkaTemplate;
-
-    public Producer(KafkaTemplate<String, TestEvent> kafkaTemplate) {
-        this.kafkaTemplate = kafkaTemplate;
-    }
-
-
-    // Send Object to Kafka Topic
-    public TestEvent produce(TestEvent testEvent) {
-        kafkaTemplate.send("testTopic", testEvent);
-        return testEvent;
-    }
+//    private KafkaTemplate<String, TestEvent> kafkaTemplate;
+//
+//    public Producer(KafkaTemplate<String, TestEvent> kafkaTemplate) {
+//        this.kafkaTemplate = kafkaTemplate;
+//    }
+//
+//
+//    // Send Object to Kafka Topic
+//    public TestEvent produce(TestEvent testEvent) {
+//        kafkaTemplate.send("testTopic", testEvent);
+//        return testEvent;
+//    }
 }

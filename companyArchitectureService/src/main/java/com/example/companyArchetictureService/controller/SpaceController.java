@@ -5,6 +5,7 @@ import com.example.companyArchetictureService.dto.SpaceDto;
 import com.example.companyArchetictureService.exceptions.BadRequestException;
 import com.example.companyArchetictureService.exceptions.NotFoundException;
 import com.example.companyArchetictureService.helpers.ResponseHandler;
+import com.example.companyArchetictureService.kafka.producer.UnitsEventProducer;
 import com.example.companyArchetictureService.model.entities.Space;
 import com.example.companyArchetictureService.repositories.SpaceRepos;
 import com.example.companyArchetictureService.requests.SpaceRequest;
@@ -25,6 +26,8 @@ public class SpaceController {
 
 
 
+
+
     public SpaceController(SpaceService spaceService,
                             ResponseHandler responseHandler) {
 
@@ -37,14 +40,13 @@ public class SpaceController {
     //Create new space
     @PostMapping()
     public ResponseEntity<Object> createSpace(@RequestBody SpaceDto space){
-
       try{
           //Create a space in the database
           spaceService.createSpace(space);
           //Return a success response
           return responseHandler.generateResponse("Space created successfully", HttpStatus.OK);
       }catch (Exception e ){
-          throw new BadRequestException("Error creating space");
+          throw new BadRequestException(e.getMessage());
       }
 
       }

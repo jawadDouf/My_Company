@@ -5,6 +5,7 @@ import com.example.employeeService.model.entities.ChatGroup;
 import com.example.employeeService.model.entities.Employee;
 import com.example.employeeService.model.entities.Employee_GroupChat;
 import com.example.employeeService.model.entities.Message;
+import com.example.employeeService.model.enums.UnitType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -32,6 +33,8 @@ public class ChatGroupDto {
 
     private Long idU;
 
+    private UnitType unit;
+
     private List<MessageDto> messages;
 
     private List<EmployeeDto> employees;
@@ -42,6 +45,7 @@ public class ChatGroupDto {
                 .name(this.getName())
                 .description(this.getDescription())
                 .idU(this.getIdU())
+                .unit(this.getUnit())
                 .build();
     }
 
@@ -52,6 +56,7 @@ public class ChatGroupDto {
                 .name(chatGroup.getName())
                 .description(chatGroup.getDescription())
                 .idU(chatGroup.getIdU())
+                .unit(chatGroup.getUnit())
                 .messages(chatGroup.getMessages().stream().map(new MessageDto()::to_dto).toList())
                 .employees(chatGroup.getEmployee_groupChats().stream().map(employeeGroupChat -> new ChatGroupEmployeesDto().to_dto(employeeGroupChat).getEmployeeDto()).toList())
                 .build();

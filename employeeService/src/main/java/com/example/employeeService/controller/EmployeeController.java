@@ -84,15 +84,15 @@ public class EmployeeController {
     }
 
     //Test Kafka
-    @GetMapping("/test")
-    public ResponseEntity<Object> testKafka(){
-        try {
-            TestEvent testEvent = null;
-           testEvent= producer.produce(new TestEvent());
-            System.out.println("Kafka is working"+testEvent.getStatus());
-            return responseHandler.generateResponse("Kafka is working",HttpStatus.OK);
-        }catch (Exception e){
-            throw new BadRequestException("Kafka is not working");
-        }
-    }
+//    @GetMapping("/test")
+//    public ResponseEntity<Object> testKafka(){
+//        try {
+//            TestEvent testEvent = null;
+////            testEvent= producer.produce(new TestEvent());
+////            System.out.println("Kafka is working"+testEvent.getStatus());
+//            return responseHandler.generateResponse("Kafka is working",HttpStatus.OK);
+//        }catch (Exception e){
+//            throw new BadRequestException("Kafka is not working");
+//        }
+//    }
 }

@@ -1,7 +1,10 @@
 package com.example.companyArchetictureService.services;
 
 
+import com.example.common.events.companyUnitsEvents.UnitCreatedEvent;
+import com.example.common.events.helpers.UnitType;
 import com.example.companyArchetictureService.dto.SpaceDto;
+import com.example.companyArchetictureService.kafka.producer.UnitsEventProducer;
 import com.example.companyArchetictureService.model.entities.Space;
 import com.example.companyArchetictureService.repositories.SpaceRepos;
 import com.example.companyArchetictureService.requests.SpaceRequest;
@@ -17,16 +20,25 @@ public class SpaceService {
 
     private SpaceDto spaceDto;
 
+    private UnitsEventProducer unitsEventProducer;
+
     public SpaceService(SpaceRepos spaceRepos,
-                        SpaceDto spaceDto) {
+                        SpaceDto spaceDto,UnitsEventProducer unitsEventProducer) {
         this.spaceRepos = spaceRepos;
         this.spaceDto = spaceDto;
+        this.unitsEventProducer=unitsEventProducer;
     }
 
     //Create a new space
     public Space createSpace(SpaceDto spaceDto){
         //Convert the request to a space object
         Space space1 = spaceDto.to_entity();
+
+        UnitCreatedEvent unitCreatedEvent = new UnitCreatedEvent();
+        unitCreatedEvent.setUnitId(space1.getId());
+        unitCreatedEvent.setUnit(UnitType.SPACE);
+        //Send the event to the employee service to create a new chatGrouo
+        unitsEventProducer.sendUnitCreatedEvent(unitCreatedEvent);
         //Save the space object
         return spaceRepos.save(space1);
     }

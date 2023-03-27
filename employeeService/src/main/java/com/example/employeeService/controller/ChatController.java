@@ -26,21 +26,16 @@ public class ChatController {
     }
 
 
-
-
     //Recieve ,Store and Send message to the other clients
     @MessageMapping("/sending")
     @SendTo("/topic/public")
     public MessageDto sendMessage(@Payload MessageDto chatMessage) {
 
         System.out.println(chatMessage.getMessage() + " " + chatMessage.getChatGroupId() + " " + chatMessage.getSenderId());
-
         //Save message to database
         messageServices.saveMessage(chatMessage);
         //Return message to the other clients
         return chatMessage;
     }
-
-
 
 }

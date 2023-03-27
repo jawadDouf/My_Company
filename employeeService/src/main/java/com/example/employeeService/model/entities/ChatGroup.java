@@ -1,6 +1,7 @@
 package com.example.employeeService.model.entities;
 
 
+import com.example.employeeService.model.enums.UnitType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -30,6 +31,10 @@ public class ChatGroup {
 
     @Column(nullable = false)
     private String description;
+
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private UnitType unit;
 
     @Column(nullable = false)
     private Long idU;

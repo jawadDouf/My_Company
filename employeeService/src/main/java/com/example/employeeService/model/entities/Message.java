@@ -24,17 +24,18 @@ public class Message {
     private String message;
 
     @ManyToOne
-    @JoinColumn(nullable = false,updatable = false,insertable = false)
+    @JoinColumn(name ="sender_id",updatable = false,insertable = false)
     private Employee sender;
 
 
     @ManyToOne
-    @JoinColumn(nullable = false,updatable = false,insertable = false)
+    @JoinColumn(name="chat_group_id",updatable = false,insertable = false)
     private ChatGroup chatGroup;
 
 
     @Column(name = "sender_id")
     private long senderId;
+
 
     @Column(name = "chat_group_id")
     private long chatGroupId;

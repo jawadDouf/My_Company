@@ -5,24 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02f30441-720b-4c16-805c-13684e365bee" name="Changes" comment="Add kafka and creat the first communication line between companyArchitectureService and employeeService">
-      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/ChatController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/dto/ChatGroupDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/dto/ChatGroupEmployeesDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/dto/MessageDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/ChatGroupRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/Employee_ChatGroupRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/MessageRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/services/ChatGroupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/services/Employee_ChatGroupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/services/MessageServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/961eff1a-84a4-44f9-ac59-0a3c4f33adc7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/961eff1a-84a4-44f9-ac59-0a3c4f33adc7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/events/companyUnitsEvents/UnitCreatedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/events/helpers/UnitType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/kafka/producer/UnitsEventProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/kafka/consumer/UnitCreatedEventConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1178348c-113e-41e3-9fff-d7491530034f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1178348c-113e-41e3-9fff-d7491530034f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/config/WebSocketsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/config/WebSocketsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/SpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/SpaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/kafka/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/kafka/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/services/SpaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/services/SpaceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/ChatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/dto/EmployeeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/dto/EmployeeDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/embeddedClasses/EmployeeGrChatId.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/embeddedClasses/EmployeeGrChatId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/dto/ChatGroupDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/dto/ChatGroupDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/kafka/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/kafka/Producer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/entities/ChatGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/entities/ChatGroup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/entities/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/entities/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/ChatGroupRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/ChatGroupRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/services/ChatGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/services/ChatGroupService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employeeService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,8 +77,8 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;102e22a9978f7c64a01020c1ff4dc26a&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -88,6 +88,11 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.common.events.helpers" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.EmployeeServiceApplication">
     <configuration name="All in myCompany" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="myCompany" />
@@ -163,7 +168,13 @@
       <workItem from="1678727116536" duration="233000" />
       <workItem from="1678736670816" duration="631000" />
       <workItem from="1679048336550" duration="3750000" />
-      <workItem from="1679076066534" duration="2520000" />
+      <workItem from="1679076066534" duration="8491000" />
+      <workItem from="1679088616459" duration="4000" />
+      <workItem from="1679139309349" duration="4821000" />
+      <workItem from="1679756932891" duration="4349000" />
+      <workItem from="1679762432183" duration="1840000" />
+      <workItem from="1679911408134" duration="689000" />
+      <workItem from="1679912287188" duration="1612000" />
     </task>
     <task id="LOCAL-00001" summary="Link the microservices">
       <created>1675542154646</created>
