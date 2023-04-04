@@ -41,7 +41,7 @@ public class ChatController {
         //Save message to database
         messageServices.saveMessage(chatMessage);
         //Return message to the other clients
-        simpMessagingTemplate.convertAndSend("/topic/public/" + chatGroupId, chatMessage);
+        simpMessagingTemplate.convertAndSend("/topic/public/" + chatGroupId,chatMessage);
     }
 
 

@@ -1,6 +1,7 @@
 package com.example.companyArchetictureService.services;
 
 
+import com.example.common.events.TestEvent;
 import com.example.common.events.companyUnitsEvents.UnitCreatedEvent;
 import com.example.common.events.helpers.UnitType;
 import com.example.companyArchetictureService.dto.SpaceDto;
@@ -38,7 +39,7 @@ public class SpaceService {
         unitCreatedEvent.setUnitId(space1.getId());
         unitCreatedEvent.setUnit(UnitType.SPACE);
         //Send the event to the employee service to create a new chatGrouo
-        unitsEventProducer.sendUnitCreatedEvent(unitCreatedEvent);
+        unitsEventProducer.sendUnitCreatedEvent(new TestEvent());
         //Save the space object
         return spaceRepos.save(space1);
     }
