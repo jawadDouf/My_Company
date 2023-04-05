@@ -18,26 +18,24 @@ public class UnitsEventProducer {
 
     @Value("${spring.kafka.topic-json.name}")
     private String topicJsonName;
-    private KafkaTemplate<String, TestEvent> kafkaTemplate;
-//    public UnitsEventProducer(KafkaTemplate<String, UnitCreatedEvent> kafkaTemplate) {
-//        this.kafkaTemplate = kafkaTemplate;
-//    }
+    private KafkaTemplate<String, UnitCreatedEvent> kafkaTemplate;
 
 
-    public UnitsEventProducer(KafkaTemplate<String, TestEvent> kafkaTemplate) {
+    public UnitsEventProducer(KafkaTemplate<String, UnitCreatedEvent> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
 
 
-    public void sendUnitCreatedEvent(TestEvent testEvent){
+
+    public void sendUnitCreatedEvent(UnitCreatedEvent unitCreatedEvent){
         //prepare the event
-//        Message<UnitCreatedEvent> message = MessageBuilder
-//                .withPayload(unitCreatedEvent)
-//                .setHeader(KafkaHeaders.TOPIC,"unitTopic")
-//                .build();
-        //send event to kafka
+        Message<UnitCreatedEvent> message = MessageBuilder
+                .withPayload(unitCreatedEvent)
+                .setHeader(KafkaHeaders.TOPIC,"unitTopic")
+                .build();
+       //  send event to kafka
         try {
-            kafkaTemplate.send(topicJsonName,testEvent);
+            kafkaTemplate.send(message);
         }catch (Exception e){
             System.out.println(e.getMessage());
         }

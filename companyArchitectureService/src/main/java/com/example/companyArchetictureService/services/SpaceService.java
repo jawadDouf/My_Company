@@ -32,16 +32,26 @@ public class SpaceService {
 
     //Create a new space
     public Space createSpace(SpaceDto spaceDto){
+
         //Convert the request to a space object
         Space space1 = spaceDto.to_entity();
 
+        //Add the space to database and store it in a variable
+        Space space2 = spaceRepos.save(space1);
+
+        //Create a new event
         UnitCreatedEvent unitCreatedEvent = new UnitCreatedEvent();
-        unitCreatedEvent.setUnitId(space1.getId());
+
+        unitCreatedEvent.setUnitId(space2.getId());
+
         unitCreatedEvent.setUnit(UnitType.SPACE);
+        unitCreatedEvent.setName(space2.getName());
+        unitCreatedEvent.setDescription(space2.getDescription());
+
         //Send the event to the employee service to create a new chatGrouo
-        unitsEventProducer.sendUnitCreatedEvent(new TestEvent());
+        unitsEventProducer.sendUnitCreatedEvent(unitCreatedEvent);
         //Save the space object
-        return spaceRepos.save(space1);
+        return space2;
     }
 
     //Get all spaces

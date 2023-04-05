@@ -17,10 +17,10 @@ public class UnitCreatedEvent {
     private UnitType unit;
 
 
-    private String name = "chatGroupNameSendByKafka";
+    private String name;
 
 
-    private String description = "chatGroupDescriptionSendByKafka";
+    private String description;
 
 
 }
