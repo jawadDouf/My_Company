@@ -34,7 +34,7 @@ public class ChatController {
 
     //Recieve ,Store and Send message to the other clients
     @MessageMapping("/sending/{chatGroupId}")
-    public void sendMessage(@Payload MessageDto chatMessage, @DestinationVariable long chatGroupId) {
+    public void sendMessage(@Payload MessageDto chatMessage, @DestinationVariable String chatGroupId) {
 
         System.out.println(chatMessage.getMessage() + " " + chatMessage.getChatGroupId() + " " + chatMessage.getSenderId());
         System.out.println(chatGroupId);

@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02f30441-720b-4c16-805c-13684e365bee" name="Changes" comment="Add kafka and creat the first communication line between companyArchitectureService and employeeService">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1178348c-113e-41e3-9fff-d7491530034f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1178348c-113e-41e3-9fff-d7491530034f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ba18758d-7f5e-4579-90bb-4c5cbfda386d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ba18758d-7f5e-4579-90bb-4c5cbfda386d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/common/events/companyUnitsEvents/UnitCreatedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/example/common/events/companyUnitsEvents/UnitCreatedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/kafka/producer/UnitsEventProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/kafka/producer/UnitsEventProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/services/SpaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/services/SpaceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/kafka/consumer/UnitCreatedEventConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/kafka/consumer/UnitCreatedEventConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiGateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/apiGateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/ChatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employeeService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +83,7 @@
       <recent name="com.example.common.events.helpers" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.CompanyArchetictureServiceApplication">
+  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
     <configuration name="All in myCompany" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="myCompany" />
       <option name="PACKAGE_NAME" value="" />
@@ -171,7 +167,8 @@
       <workItem from="1679912287188" duration="8344000" />
       <workItem from="1680011834201" duration="917000" />
       <workItem from="1680526249861" duration="8202000" />
-      <workItem from="1680671033569" duration="1757000" />
+      <workItem from="1680671033569" duration="3395000" />
+      <workItem from="1680792026510" duration="1779000" />
     </task>
     <task id="LOCAL-00001" summary="Link the microservices">
       <created>1675542154646</created>
