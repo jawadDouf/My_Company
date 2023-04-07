@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02f30441-720b-4c16-805c-13684e365bee" name="Changes" comment="Add kafka and creat the first communication line between companyArchitectureService and employeeService">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ba18758d-7f5e-4579-90bb-4c5cbfda386d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ba18758d-7f5e-4579-90bb-4c5cbfda386d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apiGateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/apiGateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/DepartementDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/DepartementDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/MiniDepsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/MiniDepsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/ProfessionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/ProfessionDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/SpaceDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/SpaceDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +86,7 @@
       <recent name="com.example.common.events.helpers" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
+  <component name="RunManager" selected="Spring Boot.CompanyArchetictureServiceApplication">
     <configuration name="All in myCompany" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="myCompany" />
       <option name="PACKAGE_NAME" value="" />
@@ -168,7 +171,8 @@
       <workItem from="1680011834201" duration="917000" />
       <workItem from="1680526249861" duration="8202000" />
       <workItem from="1680671033569" duration="3395000" />
-      <workItem from="1680792026510" duration="1779000" />
+      <workItem from="1680792026510" duration="3373000" />
+      <workItem from="1680841689825" duration="1861000" />
     </task>
     <task id="LOCAL-00001" summary="Link the microservices">
       <created>1675542154646</created>

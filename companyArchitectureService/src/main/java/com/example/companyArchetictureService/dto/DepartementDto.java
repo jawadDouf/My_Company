@@ -24,7 +24,7 @@ public class DepartementDto {
     private String name;
     private String description;
     private long unitHeadId;
-    private List<MiniDeps> miniDeps;
+    private List<MiniDepsDto> miniDeps;
 
     private long profession_id;
 
@@ -33,7 +33,8 @@ public class DepartementDto {
                 .name(departement.getName())
                 .description(departement.getDescription())
                 .unitHeadId(departement.getUnitHeadId())
-                .miniDeps(departement.getMiniDeps())
+                .miniDeps(departement.getMiniDeps().stream().map(new MiniDepsDto()::to_dto).toList())
+                .profession_id(departement.getProfessionId())
                 .build();
     }
 
@@ -43,7 +44,7 @@ public class DepartementDto {
                 .name(this.getName())
                 .description(this.getDescription())
                 .unitHeadId(this.getUnitHeadId())
-                .miniDeps(this.getMiniDeps())
+                .miniDeps(this.getMiniDeps().stream().map(MiniDepsDto::to_entity).toList())
                 .professionId(this.getProfession_id())
                 .build();
     }

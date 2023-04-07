@@ -25,7 +25,7 @@ public class ProfessionDto {
     private String name;
     private String description;
     private long unitHeadId;
-    private List<Departement> departements;
+    private List<DepartementDto> departements;
     private long spaceId;
 
     public ProfessionDto to_dto(Profession profession){
@@ -33,7 +33,8 @@ public class ProfessionDto {
                 .name(profession.getName())
                 .description(profession.getDescription())
                 .unitHeadId(profession.getUnitHeadId())
-                .departements(profession.getDepartements())
+                .departements(profession.getDepartements().stream().map(new DepartementDto()::to_dto).toList())
+                .spaceId(profession.getSpaceId())
                 .build();
     }
 
@@ -43,7 +44,7 @@ public class ProfessionDto {
                 .name(this.getName())
                 .description(this.getDescription())
                 .unitHeadId(this.getUnitHeadId())
-                .departements(this.getDepartements())
+                .departements(this.getDepartements().stream().map(DepartementDto::to_entity).toList())
                 .spaceId(this.getSpaceId())
                 .build();
     }

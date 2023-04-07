@@ -24,7 +24,7 @@ public class SpaceDto {
     private String name;
     private String description;
     private long unitHeadId;
-    private List<Profession> professions;
+    private List<ProfessionDto> professions;
 
 
     public SpaceDto to_dto(Space space){
@@ -32,7 +32,7 @@ public class SpaceDto {
                 .name(space.getName())
                 .description(space.getDescription())
                 .unitHeadId(space.getUnitHeadId())
-                .professions(space.getProfessions())
+                .professions(space.getProfessions().stream().map(new ProfessionDto()::to_dto).toList())
                 .build();
     }
 
@@ -42,7 +42,7 @@ public class SpaceDto {
                 .name(this.getName())
                 .description(this.getDescription())
                 .unitHeadId(this.getUnitHeadId())
-                .professions(this.getProfessions())
+                .professions(this.getProfessions().stream().map(ProfessionDto::to_entity).toList())
                 .build();
     }
 
