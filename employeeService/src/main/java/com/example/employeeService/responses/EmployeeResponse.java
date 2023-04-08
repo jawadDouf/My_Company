@@ -27,9 +27,21 @@ public class EmployeeResponse {
 
     private String email;
 
-    private UnitType unit;
+    private String spaceName;
 
-    private long idU;
+    private long idS;
+
+    private String departementName;
+
+    private long idD;
+
+    private String professionName;
+
+    private long idP;
+
+    private String miniDepsName;
+
+    private long idMD;
 
 
     //Convert entity to dto
@@ -39,9 +51,17 @@ public class EmployeeResponse {
                 .first_name(employee.getFirst_name())
                 .last_name(employee.getLast_name())
                 .email(employee.getEmail())
-                .unit(employee.getUnit())
-                .idU(employee.getIdU())
+                .spaceName(employee.getSpaceName())
+                .idS(employee.getIdS())
+                .departementName(employee.getDepartementName())
+                .idD(employee.getIdD())
+                .professionName(employee.getProfessionName())
+                .idP(employee.getIdP())
+                .miniDepsName(employee.getMiniDepsName())
+                .idMD(employee.getIdMD())
                 .build();
+
+
     }
 
 

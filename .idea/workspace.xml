@@ -5,14 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02f30441-720b-4c16-805c-13684e365bee" name="Changes" comment="Add kafka and creat the first communication line between companyArchitectureService and employeeService">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1178348c-113e-41e3-9fff-d7491530034f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1178348c-113e-41e3-9fff-d7491530034f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/961eff1a-84a4-44f9-ac59-0a3c4f33adc7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/961eff1a-84a4-44f9-ac59-0a3c4f33adc7/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/961eff1a-84a4-44f9-ac59-0a3c4f33adc7/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/961eff1a-84a4-44f9-ac59-0a3c4f33adc7/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/961eff1a-84a4-44f9-ac59-0a3c4f33adc7/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apiGateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/apiGateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/DepartementDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/DepartementDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/MiniDepsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/MiniDepsDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/ProfessionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/ProfessionDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/SpaceDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/SpaceDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyArchitectureService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/services/SpaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/services/SpaceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/dto/EmployeeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/dto/EmployeeDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/entities/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/EmployeeRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/EmployeeRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/responses/EmployeeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/responses/EmployeeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/services/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/services/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +95,7 @@
       <recent name="com.example.common.events.helpers" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.CompanyArchetictureServiceApplication">
+  <component name="RunManager" selected="Spring Boot.EmployeeServiceApplication">
     <configuration name="All in myCompany" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="myCompany" />
       <option name="PACKAGE_NAME" value="" />
@@ -119,6 +128,12 @@
     <configuration name="NetflixEureka" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="netflixeurekaService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.netflixeurekaService.NetflixEureka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.netflixeurekaService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -172,7 +187,9 @@
       <workItem from="1680526249861" duration="8202000" />
       <workItem from="1680671033569" duration="3395000" />
       <workItem from="1680792026510" duration="3373000" />
-      <workItem from="1680841689825" duration="1861000" />
+      <workItem from="1680841689825" duration="3002000" />
+      <workItem from="1680919496612" duration="6463000" />
+      <workItem from="1680962204430" duration="5953000" />
     </task>
     <task id="LOCAL-00001" summary="Link the microservices">
       <created>1675542154646</created>

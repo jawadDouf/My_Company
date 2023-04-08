@@ -9,9 +9,18 @@ import com.example.companyArchetictureService.kafka.producer.UnitsEventProducer;
 import com.example.companyArchetictureService.model.entities.Space;
 import com.example.companyArchetictureService.repositories.SpaceRepos;
 import com.example.companyArchetictureService.requests.SpaceRequest;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.BodyInserters;
+import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -56,6 +65,7 @@ public class SpaceService {
 
     //Get all spaces
     public List<SpaceDto> getAllSpaces(){
+
         return spaceRepos.findAll().stream().map(spaceDto::to_dto).toList();
     }
 
@@ -63,6 +73,8 @@ public class SpaceService {
     public SpaceDto getSpaceById(Long id){
         Optional<Space> space = spaceRepos.findById(id);
         if(space.isPresent()){
+
+
             return spaceDto.to_dto(space.get());
         }else {
             return null;

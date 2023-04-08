@@ -40,11 +40,28 @@ public class Employee {
 
 
     @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
-    private UnitType unit;
+    private String spaceName;
 
     @Column(nullable = false)
-    private long idU;
+    private long idS;
+
+    @Column(nullable = false)
+    private String departementName;
+
+    @Column(nullable = false)
+    private long idD;
+
+    @Column(nullable = false)
+    private String professionName;
+
+    @Column(nullable = false)
+    private long idP;
+
+    @Column(nullable = false)
+    private String miniDepsName;
+
+    @Column(nullable = false)
+    private long idMD;
 
 
     @OneToMany(mappedBy = "sender")

@@ -49,10 +49,24 @@ public class EmployeeService {
     }
 
 
-    //get all employees of unit
-    public List<EmployeeResponse> getAllEmployees(UnitType unitType,long unitId){
-        System.out.println("EmployeeService.getAllEmployees");
-        return employeeRepo.getAllByIdUAndAndUnit(unitId,unitType).stream().map(employeeResponse::to_dto).toList();
+    //get all employees of a department
+    public List<EmployeeResponse> getAllEmployeesOfDepartment(long idD){
+        return employeeRepo.getAllByIdD(idD).stream().map(employeeResponse::to_dto).toList();
+    }
+
+    //get all employees of a space
+    public List<EmployeeResponse> getAllEmployeesOfSpace(long idS){
+        return employeeRepo.getAllByIdS(idS).stream().map(employeeResponse::to_dto).toList();
+    }
+
+    //get all employees of a profession
+    public List<EmployeeResponse> getAllEmployeesOfProfession(long idP){
+        return employeeRepo.getAllByIdP(idP).stream().map(employeeResponse::to_dto).toList();
+    }
+
+    //get all employees of a miniDeps
+    public List<EmployeeResponse> getAllEmployeesOfMiniDeps(long idMD){
+        return employeeRepo.getAllByIdMD(idMD).stream().map(employeeResponse::to_dto).toList();
     }
 
     //Delete employees

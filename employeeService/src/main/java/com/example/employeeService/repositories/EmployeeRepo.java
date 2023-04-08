@@ -14,10 +14,21 @@ public interface EmployeeRepo extends JpaRepository<Employee,Long> {
 
 
 
-    //Get Employees by id and unitName
-   List<Employee> getAllByIdUAndAndUnit(long unitId,UnitType unit);
+    //get all employees of a department
+    List<Employee> getAllByIdD(long idD);
 
-   //Get Employees By Email
+    //get all employees of a space
+    List<Employee> getAllByIdS(long idS);
+
+    //get all employees of a profession
+    List<Employee> getAllByIdP(long idP);
+
+    //get all employees of a miniDeps
+    List<Employee> getAllByIdMD(long idMD);
+
+
+
+    //Get Employees By Email
 
     Optional<Employee> getEmployeesByEmail(String email);
 

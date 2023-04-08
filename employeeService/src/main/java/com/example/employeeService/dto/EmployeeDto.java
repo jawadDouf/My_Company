@@ -33,9 +33,21 @@ public class EmployeeDto {
 
     private String password;
 
-    private UnitType unit;
+    private String spaceName;
 
-    private long idU;
+    private long idS;
+
+    private String departementName;
+
+    private long idD;
+
+    private String professionName;
+
+    private long idP;
+
+    private String miniDepsName;
+
+    private long idMD;
 
 
 
@@ -44,12 +56,19 @@ public class EmployeeDto {
     //Convert dto to entity
     public Employee to_entity(){
         return Employee.builder()
-                .first_name(this.getFirst_name())
-                .last_name(this.getLast_name())
-                .email(this.getEmail())
-                .unit(this.getUnit())
-                .password(this.getPassword())
-                .idU(this.idU)
+                .id(this.id)
+                .first_name(this.first_name)
+                .last_name(this.last_name)
+                .email(this.email)
+                .password(this.password)
+                .spaceName(this.spaceName)
+                .idS(this.idS)
+                .departementName(this.departementName)
+                .idD(this.idD)
+                .professionName(this.professionName)
+                .idP(this.idP)
+                .miniDepsName(this.miniDepsName)
+                .idMD(this.idMD)
                 .build();
     }
 
@@ -61,9 +80,15 @@ public class EmployeeDto {
                 .first_name(employee.getFirst_name())
                 .last_name(employee.getLast_name())
                 .email(employee.getEmail())
-                .unit(employee.getUnit())
                 .password(employee.getPassword())
-                .idU(employee.getIdU())
+                .spaceName(employee.getSpaceName())
+                .idS(employee.getIdS())
+                .departementName(employee.getDepartementName())
+                .idD(employee.getIdD())
+                .professionName(employee.getProfessionName())
+                .idP(employee.getIdP())
+                .miniDepsName(employee.getMiniDepsName())
+                .idMD(employee.getIdMD())
                 .build();
     }
 
