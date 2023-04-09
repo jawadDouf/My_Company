@@ -58,7 +58,7 @@ public class miniDepsController {
 
 
     //Get a miniDeps by id
-    @GetMapping("/{id}")
+    @GetMapping("/departement/{id}")
     public ResponseEntity<MiniDepsDto> getMiniDepsById(@PathVariable("id") Long id){
         try{
             //Get the miniDeps
@@ -70,6 +70,18 @@ public class miniDepsController {
         }
     }
 
+    //Get all miniDeps of a departement
+    @GetMapping("/{id}")
+    public ResponseEntity<List<MiniDepsDto>> getAllMiniDepsOfDepartement(@PathVariable("id") Long id){
+        try{
+            //Get the miniDeps
+            List<MiniDepsDto> miniDeps = miniDepsService.getAllMiniDepsOfDepartement(id);
+            //Return a success response
+            return new ResponseEntity<>(miniDeps, HttpStatus.OK);
+        }catch (Exception e ){
+            throw new NotFoundException("Error getting miniDeps");
+        }
+    }
 
 
     //Delete a miniDeps by id

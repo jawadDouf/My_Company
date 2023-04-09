@@ -58,7 +58,7 @@ public class Employee {
     private long idP;
 
     @Column(nullable = false)
-    private String miniDepsName;
+    private String miniDepName;
 
     @Column(nullable = false)
     private long idMD;

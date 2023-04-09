@@ -67,7 +67,7 @@ public class EmployeeDto {
                 .idD(this.idD)
                 .professionName(this.professionName)
                 .idP(this.idP)
-                .miniDepsName(this.miniDepsName)
+                .miniDepName(this.miniDepsName)
                 .idMD(this.idMD)
                 .build();
     }
@@ -87,7 +87,7 @@ public class EmployeeDto {
                 .idD(employee.getIdD())
                 .professionName(employee.getProfessionName())
                 .idP(employee.getIdP())
-                .miniDepsName(employee.getMiniDepsName())
+                .miniDepsName(employee.getMiniDepName())
                 .idMD(employee.getIdMD())
                 .build();
     }

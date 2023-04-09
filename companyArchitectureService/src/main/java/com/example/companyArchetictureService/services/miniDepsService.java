@@ -48,6 +48,10 @@ public class miniDepsService {
         return miniDepsDto.to_dto(miniDepsRepo.findById(id).get());
     }
 
+    //Get all miniDeps of a departement
+    public List<MiniDepsDto> getAllMiniDepsOfDepartement(long departementId){
+        return miniDepsRepo.findAllByDepartementId(departementId).stream().map(miniDepsDto::to_dto).toList();
+    }
 
     //Delete a miniDeps by id
     public void deleteMiniDepsById(Long id){

@@ -37,6 +37,10 @@ public class ProfessionService {
         return professionRepos.findAll().stream().map(professionDto::to_dto).toList();
     }
 
+    //Get all professions of a space
+    public List<ProfessionDto> getAllProfessionsOfSpace(long spaceId){
+        return professionRepos.findAllBySpaceId(spaceId).stream().map(professionDto::to_dto).toList();
+    }
     //Get a profession by id
     public ProfessionDto getProfessionById(Long id){
         return professionDto.to_dto(professionRepos.findById(id).get());

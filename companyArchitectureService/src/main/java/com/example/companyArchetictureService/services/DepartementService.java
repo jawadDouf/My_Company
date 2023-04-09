@@ -30,6 +30,10 @@ public class DepartementService {
         return departementRepo.save(departement1);
     }
 
+    //get all departements of a profession
+    public List<DepartementDto> getAllDepartementsOfProfession(long professionId){
+        return departementRepo.findAllByProfessionId(professionId).stream().map(departementDto::to_dto).toList();
+    }
     //Get all departements
     public List<DepartementDto> getAllDepartements(){
         return departementRepo.findAll().stream().map(departementDto::to_dto).toList();

@@ -21,6 +21,7 @@ import static com.example.employeeService.model.enums.UnitType.SPACE;
 
 @RestController
 @RequestMapping("/api/employees")
+@CrossOrigin(origins = "http://localhost:4200")
 public class EmployeeController {
 
 

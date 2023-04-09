@@ -52,8 +52,23 @@ public class DepartementController {
         }
     }
 
-    //Get a departement by id
+
+
+    //Get departements of a profession
     @GetMapping("/{id}")
+    public ResponseEntity<List<DepartementDto>> getDepartementsOfProfession(@PathVariable long id) {
+        try {
+            //Get all professions
+            List<DepartementDto> departements = departementService.getAllDepartementsOfProfession(id);
+            //Return a success response
+            return new ResponseEntity<>(departements, HttpStatus.OK);
+        } catch (Exception e) {
+            throw new NotFoundException("Error getting departements");
+        }
+    }
+
+    //Get a departement by id
+    @GetMapping("/departement/{id}")
     public ResponseEntity<DepartementDto> getDepartementById(@PathVariable long id) {
         try {
             //Get a profession by id

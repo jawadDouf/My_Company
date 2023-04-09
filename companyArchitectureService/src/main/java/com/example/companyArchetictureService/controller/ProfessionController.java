@@ -52,8 +52,22 @@ public class ProfessionController {
         }
     }
 
-    //Get a profession by id
+    //Get professions by space id
     @GetMapping("/{id}")
+    public ResponseEntity<List<ProfessionDto>> getProfessionsById(@PathVariable long id){
+        try{
+            //Get a profession by id
+            List<ProfessionDto> professions = professionService.getAllProfessionsOfSpace(id);
+            //Return a success response
+            return new ResponseEntity<>(professions, HttpStatus.OK);
+
+        }catch (Exception e ){
+            throw new NotFoundException("Error getting profession");
+        }
+    }
+
+    //Get a profession by id
+    @GetMapping("/profession/{id}")
     public ResponseEntity<ProfessionDto> getProfessionById(@PathVariable long id){
         try{
             //Get a profession by id
