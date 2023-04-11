@@ -5,21 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02f30441-720b-4c16-805c-13684e365bee" name="Changes" comment="Add kafka and creat the first communication line between companyArchitectureService and employeeService">
+      <change afterPath="$PROJECT_DIR$/apiGateway/src/main/java/com/example/apiGateway/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/config/WebClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/ChatGroupController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/entities/Roles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/enums/RoleType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/RoleRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/1178348c-113e-41e3-9fff-d7491530034f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1178348c-113e-41e3-9fff-d7491530034f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apiGateway/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apiGateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/apiGateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyArchitectureService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/DepartementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/DepartementController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/ProfessionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/ProfessionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/SpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/SpaceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/miniDepsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/miniDepsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/repositories/DepartementRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/repositories/DepartementRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/repositories/ProfessionRepos.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/repositories/ProfessionRepos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/repositories/miniDepsRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/repositories/miniDepsRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/services/DepartementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/services/DepartementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/services/ProfessionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/services/ProfessionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/services/miniDepsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/services/miniDepsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/DepartementDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/DepartementDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/MiniDepsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/MiniDepsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/ProfessionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/ProfessionDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/SpaceDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/SpaceDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/services/SpaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/services/SpaceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/ChatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/dto/EmployeeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/dto/EmployeeDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/entities/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/ChatGroupRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/ChatGroupRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/EmployeeRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/EmployeeRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/MessageRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/MessageRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/responses/EmployeeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/responses/EmployeeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/services/ChatGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/services/ChatGroupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/services/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/services/EmployeeService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +46,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -56,35 +73,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/YC/IdeaProjects/Briefs deuxiéme année Youcode-Backend/myCompany/companyArchitectureService/src/main/java/com/example/companyArchetictureService/kafka&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;102e22a9978f7c64a01020c1ff4dc26a&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "C:/Users/YC/IdeaProjects/Briefs deuxiéme année Youcode-Backend/myCompany/companyArchitectureService/src/main/java/com/example/companyArchetictureService/kafka",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "com.haulmont.jpb.viewMode",
+    "spring.configuration.checksum": "2c15839693754d94f5385316744cb823",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\YC\IdeaProjects\Briefs deuxiéme année Youcode-Backend\myCompany\companyArchitectureService\src\main\java\com\example\companyArchetictureService\kafka" />
@@ -93,7 +111,7 @@
       <recent name="com.example.common.events.helpers" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.CompanyArchetictureServiceApplication">
+  <component name="RunManager" selected="Spring Boot.EmployeeServiceApplication">
     <configuration name="All in myCompany" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="myCompany" />
       <option name="PACKAGE_NAME" value="" />
@@ -187,7 +205,9 @@
       <workItem from="1680792026510" duration="3373000" />
       <workItem from="1680841689825" duration="3002000" />
       <workItem from="1680919496612" duration="6463000" />
-      <workItem from="1680962204430" duration="12591000" />
+      <workItem from="1680962204430" duration="15094000" />
+      <workItem from="1681122588414" duration="24019000" />
+      <workItem from="1681202491697" duration="9929000" />
     </task>
     <task id="LOCAL-00001" summary="Link the microservices">
       <created>1675542154646</created>

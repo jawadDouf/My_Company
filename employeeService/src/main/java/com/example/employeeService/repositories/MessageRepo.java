@@ -11,4 +11,8 @@ public interface MessageRepo extends JpaRepository<Message,Long> {
 
     //Bring all the messages of a chat group
     List<Message> findAllByChatGroupId(long chatGroupId);
+
+
+
+
 }

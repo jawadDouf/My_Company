@@ -21,6 +21,9 @@ import java.util.List;
 @NoArgsConstructor
 public class DepartementDto {
 
+
+
+    private long id;
     private String name;
     private String description;
     private long unitHeadId;
@@ -30,6 +33,7 @@ public class DepartementDto {
 
     public DepartementDto to_dto(Departement departement){
         return DepartementDto.builder()
+                .id(departement.getId())
                 .name(departement.getName())
                 .description(departement.getDescription())
                 .unitHeadId(departement.getUnitHeadId())
@@ -41,6 +45,7 @@ public class DepartementDto {
 
     public Departement to_entity(){
         return Departement.builder()
+                .id(this.getId())
                 .name(this.getName())
                 .description(this.getDescription())
                 .unitHeadId(this.getUnitHeadId())

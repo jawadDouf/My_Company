@@ -57,7 +57,7 @@ public class EmployeeResponse {
                 .idD(employee.getIdD())
                 .professionName(employee.getProfessionName())
                 .idP(employee.getIdP())
-                .miniDepsName(employee.getMiniDepsName())
+                .miniDepsName(employee.getMiniDepName())
                 .idMD(employee.getIdMD())
                 .build();
 

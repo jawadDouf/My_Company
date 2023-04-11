@@ -17,6 +17,9 @@ import org.springframework.stereotype.Component;
 @NoArgsConstructor
 public class MiniDepsDto {
 
+
+    private long id;
+
     private String name;
     private String description;
     private long unitHeadId;
@@ -26,6 +29,7 @@ public class MiniDepsDto {
     //Turn a MiniDeps entity into a MiniDepsDto
     public  MiniDepsDto to_dto(MiniDeps miniDeps){
         return MiniDepsDto.builder()
+                .id(miniDeps.getId())
                 .name(miniDeps.getName())
                 .description(miniDeps.getDescription())
                 .unitHeadId(miniDeps.getUnitHeadId())
@@ -38,6 +42,7 @@ public class MiniDepsDto {
     //Turn dto to entity
     public MiniDeps to_entity(){
         return MiniDeps.builder()
+                .id(this.getId())
                 .name(this.getName())
                 .description(this.getDescription())
                 .unitHeadId(this.getUnitHeadId())

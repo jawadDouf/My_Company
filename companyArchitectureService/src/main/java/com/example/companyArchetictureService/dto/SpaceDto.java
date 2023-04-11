@@ -21,6 +21,7 @@ import java.util.List;
 public class SpaceDto {
 
 
+    private long id;
     private String name;
     private String description;
     private long unitHeadId;
@@ -29,6 +30,7 @@ public class SpaceDto {
 
     public SpaceDto to_dto(Space space){
         return SpaceDto.builder()
+                .id(space.getId())
                 .name(space.getName())
                 .description(space.getDescription())
                 .unitHeadId(space.getUnitHeadId())
@@ -39,6 +41,7 @@ public class SpaceDto {
 
     public Space to_entity(){
         return Space.builder()
+                .id(this.getId())
                 .name(this.getName())
                 .description(this.getDescription())
                 .unitHeadId(this.getUnitHeadId())

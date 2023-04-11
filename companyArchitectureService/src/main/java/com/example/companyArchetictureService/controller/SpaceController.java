@@ -18,6 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/space")
+@CrossOrigin(origins = "*")
 public class SpaceController {
 
     private SpaceService spaceService;
@@ -78,7 +79,7 @@ public class SpaceController {
 
         //Get a space by id
         @GetMapping("/{id}")
-        public ResponseEntity<SpaceDto> getSpaceById(@PathVariable long id){
+        public ResponseEntity<List<SpaceDto>> getSpaceById(@PathVariable long id){
             try{
                 //Get a space by id and Return a success response
                 return new ResponseEntity<>(spaceService.getSpaceById(id),HttpStatus.OK);

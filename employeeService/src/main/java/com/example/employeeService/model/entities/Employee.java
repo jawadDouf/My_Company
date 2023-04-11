@@ -67,6 +67,9 @@ public class Employee {
     @OneToMany(mappedBy = "sender")
     private List<Message> messages;
 
+    @ManyToOne
+    private Roles role;
+
 
 
     @OneToMany(mappedBy = "id.employee")

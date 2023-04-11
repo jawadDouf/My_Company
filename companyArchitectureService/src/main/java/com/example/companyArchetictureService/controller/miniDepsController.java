@@ -15,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/miniDeps")
+@CrossOrigin(origins = "*")
 public class miniDepsController {
 
 

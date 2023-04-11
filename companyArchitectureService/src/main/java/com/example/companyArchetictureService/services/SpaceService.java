@@ -18,10 +18,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class SpaceService {
@@ -70,12 +67,12 @@ public class SpaceService {
     }
 
     //Get a space by id
-    public SpaceDto getSpaceById(Long id){
+    public List<SpaceDto> getSpaceById(Long id){
         Optional<Space> space = spaceRepos.findById(id);
+        List<SpaceDto> spaces = new ArrayList<>();
         if(space.isPresent()){
-
-
-            return spaceDto.to_dto(space.get());
+            spaces.add(spaceDto.to_dto(space.get()));
+            return spaces;
         }else {
             return null;
         }

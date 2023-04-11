@@ -1,7 +1,6 @@
 package com.example.employeeService.repositories;
 
 import com.example.employeeService.model.entities.Employee;
-import com.example.employeeService.model.enums.UnitType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -28,6 +27,7 @@ public interface EmployeeRepo extends JpaRepository<Employee,Long> {
 
 
 
+    Boolean existsByEmail(String email);
     //Get Employees By Email
 
     Optional<Employee> getEmployeesByEmail(String email);

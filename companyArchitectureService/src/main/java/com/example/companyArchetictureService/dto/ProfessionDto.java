@@ -22,6 +22,7 @@ import java.util.List;
 @NoArgsConstructor
 public class ProfessionDto {
 
+    private long id;
     private String name;
     private String description;
     private long unitHeadId;
@@ -30,6 +31,7 @@ public class ProfessionDto {
 
     public ProfessionDto to_dto(Profession profession){
         return ProfessionDto.builder()
+                .id(profession.getId())
                 .name(profession.getName())
                 .description(profession.getDescription())
                 .unitHeadId(profession.getUnitHeadId())
@@ -41,6 +43,7 @@ public class ProfessionDto {
 
     public Profession to_entity(){
         return Profession.builder()
+                .id(this.getId())
                 .name(this.getName())
                 .description(this.getDescription())
                 .unitHeadId(this.getUnitHeadId())

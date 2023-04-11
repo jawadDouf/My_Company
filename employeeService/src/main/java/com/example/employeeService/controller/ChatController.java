@@ -3,17 +3,18 @@ package com.example.employeeService.controller;
 
 import com.example.employeeService.dto.MessageDto;
 import com.example.employeeService.model.entities.Message;
+import com.example.employeeService.model.enums.UnitType;
 import com.example.employeeService.services.MessageServices;
+import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 public class ChatController {
@@ -43,6 +44,8 @@ public class ChatController {
         //Return message to the other clients
         simpMessagingTemplate.convertAndSend("/topic/public/" + chatGroupId,chatMessage);
     }
+
+
 
 
 

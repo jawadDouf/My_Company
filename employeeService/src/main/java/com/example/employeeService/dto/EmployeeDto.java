@@ -45,7 +45,7 @@ public class EmployeeDto {
 
     private long idP;
 
-    private String miniDepsName;
+    private String miniDepName;
 
     private long idMD;
 
@@ -67,7 +67,7 @@ public class EmployeeDto {
                 .idD(this.idD)
                 .professionName(this.professionName)
                 .idP(this.idP)
-                .miniDepName(this.miniDepsName)
+                .miniDepName(this.miniDepName)
                 .idMD(this.idMD)
                 .build();
     }
@@ -87,7 +87,7 @@ public class EmployeeDto {
                 .idD(employee.getIdD())
                 .professionName(employee.getProfessionName())
                 .idP(employee.getIdP())
-                .miniDepsName(employee.getMiniDepName())
+                .miniDepName(employee.getMiniDepName())
                 .idMD(employee.getIdMD())
                 .build();
     }

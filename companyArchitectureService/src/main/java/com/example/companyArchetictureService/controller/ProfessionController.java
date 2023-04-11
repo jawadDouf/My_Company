@@ -14,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/profession")
+@CrossOrigin(origins = "*")
 public class ProfessionController {
 
     private ProfessionService professionService;

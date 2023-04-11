@@ -6,6 +6,7 @@ import com.example.employeeService.dto.EmployeeDto;
 import com.example.employeeService.exceptions.BadRequestException;
 import com.example.employeeService.helpers.ResponseHandler;
 import com.example.employeeService.kafka.Producer;
+import com.example.employeeService.model.entities.Employee;
 import com.example.employeeService.model.enums.UnitType;
 import com.example.employeeService.repositories.EmployeeRepo;
 import com.example.employeeService.responses.EmployeeResponse;
@@ -15,6 +16,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
 import java.util.List;
 
 import static com.example.employeeService.model.enums.UnitType.SPACE;
@@ -44,7 +46,7 @@ public class EmployeeController {
 
 
     //Add an employee
-    @PostMapping()
+    @PostMapping("/register")
     public ResponseEntity<Object> saveEmployee(@RequestBody  EmployeeDto employeeDto){
 
         try {
@@ -56,6 +58,24 @@ public class EmployeeController {
         }
     }
 
+//    @PostMapping("/register")
+//    public ResponseEntity<String> register(@RequestBody RegisterDto registerDto){
+////        if(personRepo.existsByEmail(registerDto.getEmail())){
+////            return new ResponseEntity<>("Email is taken", HttpStatus.BAD_REQUEST);
+////        }
+//
+//        Employee employee = new Employee();
+//        employee.setEmail(registerDto.getEmail().toLowerCase());
+//        employee.setPassword(passwordEncoder.encode(registerDto.getPassword()));
+//        person.setLast_name(registerDto.getLast_name());
+//        person.setFirst_name(registerDto.getFirst_name());
+//        person.setPhone_number(registerDto.getPhone_number());
+//        person.setAdresse(registerDto.getAdresse());
+//        Roles role = roleRepo.findByName("User").get();
+//        person.setRoles(Collections.singletonList(role));
+//        personRepo.save(person);
+//        return new ResponseEntity<>("User registred success",HttpStatus.OK);
+//    }
 
      //Get all employees of a unit
     @GetMapping()
@@ -107,6 +127,21 @@ public class EmployeeController {
             throw new BadRequestException("There is no employee in the database with this id");
         }
     }
+
+
+    //Get an Employee by email
+    @GetMapping("/{email}")
+    public ResponseEntity<Employee> getOneEmployeeByEmail(@PathVariable String email){
+        try {
+            //Get the employee and Return the response
+            return new ResponseEntity<>(employeeService.getEmployeeByEmail(email),HttpStatus.OK);
+        }catch (Exception e){
+            //Throw an exception
+            throw new BadRequestException("There is no employee in the database with this email");
+        }
+    }
+
+
 
     //Test Kafka
 //    @GetMapping("/test")

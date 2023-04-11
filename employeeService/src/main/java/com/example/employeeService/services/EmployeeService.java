@@ -4,10 +4,11 @@ package com.example.employeeService.services;
 import com.example.employeeService.dto.EmployeeDto;
 import com.example.employeeService.exceptions.BadRequestException;
 import com.example.employeeService.model.entities.Employee;
-import com.example.employeeService.model.enums.UnitType;
+
 import com.example.employeeService.repositories.EmployeeRepo;
 import com.example.employeeService.responses.EmployeeResponse;
-import lombok.RequiredArgsConstructor;
+
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,6 +22,7 @@ public class EmployeeService {
 
     private EmployeeResponse employeeResponse;
 
+    private PasswordEncoder passwordEncoder;
 
     public EmployeeService(EmployeeRepo employeeRepo, EmployeeDto employeeDto,EmployeeResponse employeeResponse) {
         this.employeeRepo = employeeRepo;
@@ -38,6 +40,7 @@ public class EmployeeService {
             throw new BadRequestException("email already exists");
         }else {
             System.out.println("EmployeeService.save2");
+
             return employeeRepo.save(employee.to_entity());
         }
     }
@@ -48,7 +51,14 @@ public class EmployeeService {
         return employeeResponse.to_dto(employeeRepo.findById(id).get());
     }
 
-
+    //get employee by email
+    public Employee getEmployeeByEmail(String email){
+        if(!employeeRepo.getEmployeesByEmail(email).isPresent()){
+            throw new BadRequestException("email doesn't exists");
+        }else {
+            return employeeRepo.getEmployeesByEmail(email).get();
+        }
+    }
     //get all employees of a department
     public List<EmployeeResponse> getAllEmployeesOfDepartment(long idD){
         return employeeRepo.getAllByIdD(idD).stream().map(employeeResponse::to_dto).toList();
