@@ -49,8 +49,7 @@ public class EmployeeDto {
 
     private long idMD;
 
-
-
+    private RolesDto rolesDto;
 
 
     //Convert dto to entity
@@ -69,6 +68,7 @@ public class EmployeeDto {
                 .idP(this.idP)
                 .miniDepName(this.miniDepName)
                 .idMD(this.idMD)
+                .role(this.getRolesDto().to_entity())
                 .build();
     }
 
@@ -89,6 +89,7 @@ public class EmployeeDto {
                 .idP(employee.getIdP())
                 .miniDepName(employee.getMiniDepName())
                 .idMD(employee.getIdMD())
+                .rolesDto(new RolesDto().to_dto(employee.getRole()))
                 .build();
     }
 

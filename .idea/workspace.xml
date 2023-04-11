@@ -5,37 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02f30441-720b-4c16-805c-13684e365bee" name="Changes" comment="Add kafka and creat the first communication line between companyArchitectureService and employeeService">
-      <change afterPath="$PROJECT_DIR$/apiGateway/src/main/java/com/example/apiGateway/main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/config/WebClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/ChatGroupController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/entities/Roles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/enums/RoleType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/RoleRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1178348c-113e-41e3-9fff-d7491530034f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1178348c-113e-41e3-9fff-d7491530034f.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/config/WebClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/dto/RolesDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apiGateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiGateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/apiGateway/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/companyArchitectureService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/DepartementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/DepartementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/ProfessionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/ProfessionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/SpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/SpaceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/miniDepsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/controller/miniDepsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/DepartementDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/DepartementDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/MiniDepsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/MiniDepsDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/ProfessionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/ProfessionDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/SpaceDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/dto/SpaceDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/services/SpaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/companyArchitectureService/src/main/java/com/example/companyArchetictureService/services/SpaceService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employeeService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/ChatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/dto/EmployeeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/dto/EmployeeDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/entities/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/model/entities/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/ChatGroupRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/ChatGroupRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/EmployeeRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/EmployeeRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/MessageRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/repositories/MessageRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/responses/EmployeeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/responses/EmployeeResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/services/ChatGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/services/ChatGroupService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/services/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/services/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/security/Security_Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/employeeService/src/main/java/com/example/employeeService/security/Security_Config.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +88,7 @@
       <recent name="com.example.common.events.helpers" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.EmployeeServiceApplication">
+  <component name="RunManager" selected="Spring Boot.CompanyArchetictureServiceApplication">
     <configuration name="All in myCompany" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="myCompany" />
       <option name="PACKAGE_NAME" value="" />
@@ -207,7 +184,7 @@
       <workItem from="1680919496612" duration="6463000" />
       <workItem from="1680962204430" duration="15094000" />
       <workItem from="1681122588414" duration="24019000" />
-      <workItem from="1681202491697" duration="9929000" />
+      <workItem from="1681202491697" duration="18088000" />
     </task>
     <task id="LOCAL-00001" summary="Link the microservices">
       <created>1675542154646</created>

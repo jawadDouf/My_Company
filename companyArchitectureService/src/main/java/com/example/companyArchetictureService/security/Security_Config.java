@@ -1,8 +1,8 @@
-package com.example.employeeService.security;
+package com.example.companyArchetictureService.security;
 
 
 //import com.example.employeeService.model.enums.RoleType;
-import com.example.employeeService.model.enums.RoleType;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -45,14 +45,11 @@ public class Security_Config {
                 .and()
                 .authorizeHttpRequests(
                         auth -> auth
-//                                .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                                .requestMatchers(HttpMethod.POST,"/api/authentification/**")
-                                .permitAll()
-                                .requestMatchers(HttpMethod.POST,"/api/**").hasRole(RoleType.ADMIN.name())
-                                .requestMatchers(HttpMethod.POST,"/api/**").hasRole(RoleType.UNITADMIN.name())
+                                .requestMatchers(HttpMethod.GET,"/api/space/**").permitAll()
+                                .requestMatchers(HttpMethod.POST,"/api/**").hasRole("ADMIN")
+                                .requestMatchers(HttpMethod.POST,"/api/**").hasRole("UNITADMIN")
                                 .anyRequest().authenticated()
-//                                .anyRequest().authenticated()
-                                //.requestMatchers(HttpMethod.POST,"/api/employees/**").
+                                .anyRequest().authenticated()
                 );
         http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
         return http.build();

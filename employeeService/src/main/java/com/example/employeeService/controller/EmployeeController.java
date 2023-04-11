@@ -141,6 +141,20 @@ public class EmployeeController {
         }
     }
 
+    @GetMapping("/email/{email}")
+    public ResponseEntity<String> getOneEmployeeInfoByEmail(@PathVariable String email){
+        try {
+            //Get the employee
+            Employee emp = employeeService.getEmployeeByEmail(email);
+            System.out.println(emp.getEmail()+"!#!"+emp.getRole().toString());
+            //Return the response
+            return new ResponseEntity<>(emp.getEmail()+"!#!"+emp.getRole().toString(),HttpStatus.OK);
+        }catch (Exception e){
+            //Throw an exception
+            throw new BadRequestException("There is no employee in the database with this email");
+        }
+    }
+
 
 
     //Test Kafka
