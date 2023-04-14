@@ -55,7 +55,7 @@ public class SpaceService {
         unitCreatedEvent.setDescription(space2.getDescription());
 
         //Send the event to the employee service to create a new chatGrouo
-        unitsEventProducer.sendUnitCreatedEvent(unitCreatedEvent);
+        unitCreatedEvent.setDescription("departement.getDescription()");
         //Save the space object
         return space2;
     }

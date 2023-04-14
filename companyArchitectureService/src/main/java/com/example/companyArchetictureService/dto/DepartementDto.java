@@ -49,7 +49,6 @@ public class DepartementDto {
                 .name(this.getName())
                 .description(this.getDescription())
                 .unitHeadId(this.getUnitHeadId())
-                .miniDeps(this.getMiniDeps().stream().map(MiniDepsDto::to_entity).toList())
                 .professionId(this.getProfession_id())
                 .build();
     }

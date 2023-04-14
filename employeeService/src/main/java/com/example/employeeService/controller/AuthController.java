@@ -22,7 +22,7 @@ import com.example.employeeService.dto.*;
 import java.util.Collections;
 
 @RestController
-@RequestMapping("api/authentification")
+@RequestMapping("/api/authentification")
 @CrossOrigin(origins="*")
 public class AuthController {
 
@@ -49,7 +49,8 @@ public class AuthController {
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginDto.getEmail(),loginDto.getPassword()));
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String token = jwtGenerator.generateToken(authentication);
-        return new ResponseEntity<>(new AuthResponseDto(token,employeeService.getEmployeeByEmail(loginDto.getEmail()).getId()), HttpStatus.OK);
+        Employee employeeDto = employeeService.getEmployeeByEmail(loginDto.getEmail());
+        return new ResponseEntity<>(new AuthResponseDto(token,employeeDto.getId(),employeeDto.getFirst_name(),employeeDto.getLast_name(),employeeDto.getRole().getRole().name()), HttpStatus.OK);
     }
 
     @PostMapping("/register")

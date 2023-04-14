@@ -10,12 +10,19 @@ public class AuthResponseDto {
     private String tokenType ="Bearer";
 
     private long employeeId;
-    public AuthResponseDto(String accessToken,long employeeId){
-        this.accessToken=accessToken;
-        this.employeeId=employeeId;
+
+    private String firstName;
+
+    private String lastName;
+
+    private String role;
+
+    public AuthResponseDto(String accessToken, long employeeId, String firstName, String lastName, String role) {
+        this.accessToken = accessToken;
+
+        this.employeeId = employeeId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.role = role;
     }
-
-
-
-
 }

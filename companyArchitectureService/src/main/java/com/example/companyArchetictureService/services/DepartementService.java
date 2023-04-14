@@ -1,8 +1,11 @@
 package com.example.companyArchetictureService.services;
 
 
+import com.example.common.events.companyUnitsEvents.UnitCreatedEvent;
+import com.example.common.events.helpers.UnitType;
 import com.example.companyArchetictureService.dto.DepartementDto;
 import com.example.companyArchetictureService.dto.ProfessionDto;
+import com.example.companyArchetictureService.kafka.producer.UnitsEventProducer;
 import com.example.companyArchetictureService.model.entities.Departement;
 import com.example.companyArchetictureService.model.entities.Profession;
 import com.example.companyArchetictureService.repositories.DepartementRepo;
@@ -17,17 +20,36 @@ public class DepartementService {
     private DepartementRepo departementRepo;
     private DepartementDto departementDto;
 
-    public DepartementService(DepartementRepo departementRepo, DepartementDto departementDto) {
+    private UnitsEventProducer unitsEventProducer;
+
+    public DepartementService(DepartementRepo departementRepo, DepartementDto departementDto, UnitsEventProducer unitsEventProducer) {
         this.departementRepo = departementRepo;
         this.departementDto = departementDto;
+        this.unitsEventProducer = unitsEventProducer;
     }
 
     //Create a new departement
     public Departement createDepartement(DepartementDto departementDto){
         //Convert the request to a departement object
         Departement departement1 = departementDto.to_entity();
+
+
+        //Add the departement to database and store it in a variable
+        Departement departement = departementRepo.save(departement1);
+
+        //Create a new event
+        UnitCreatedEvent unitCreatedEvent = new UnitCreatedEvent();
+
+        unitCreatedEvent.setUnitId(departement.getId());
+
+        unitCreatedEvent.setUnit(UnitType.DEPARTEMENT);
+        unitCreatedEvent.setName(departement.getName());
+        unitCreatedEvent.setDescription("departement.getDescription()");
+
+        //Send the event to the employee service to create a new chatGrouo
+        unitsEventProducer.sendUnitCreatedEvent(unitCreatedEvent);
         //Save the profession object
-        return departementRepo.save(departement1);
+        return departement;
     }
 
     //get all departements of a profession

@@ -38,6 +38,7 @@ public class CustomeUserDetailsService implements UserDetailsService {
                     .retrieve()
                     .bodyToMono(String.class)
                     .block();
+         System.out.println(returnedResult);
 
             return new User(email,returnedResult.split("!#!")[0],Collections.singleton(mapRolesToAuthorities(returnedResult.split("!#!")[1])));
     }

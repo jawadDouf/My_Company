@@ -47,7 +47,6 @@ public class ProfessionDto {
                 .name(this.getName())
                 .description(this.getDescription())
                 .unitHeadId(this.getUnitHeadId())
-                .departements(this.getDepartements().stream().map(DepartementDto::to_entity).toList())
                 .spaceId(this.getSpaceId())
                 .build();
     }

@@ -23,7 +23,7 @@ import static com.example.employeeService.model.enums.UnitType.SPACE;
 
 @RestController
 @RequestMapping("/api/employees")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins="*")
 public class EmployeeController {
 
 
@@ -145,10 +145,10 @@ public class EmployeeController {
     public ResponseEntity<String> getOneEmployeeInfoByEmail(@PathVariable String email){
         try {
             //Get the employee
-            Employee emp = employeeService.getEmployeeByEmail(email);
-            System.out.println(emp.getEmail()+"!#!"+emp.getRole().toString());
+            EmployeeDto emp = new EmployeeDto().to_dto(employeeService.getEmployeeByEmail(email));
+            System.out.println(emp.getEmail()+"!#!"+emp.getRolesDto().toString());
             //Return the response
-            return new ResponseEntity<>(emp.getEmail()+"!#!"+emp.getRole().toString(),HttpStatus.OK);
+            return new ResponseEntity<>(emp.getEmail()+"!#!"+emp.getRolesDto().getRole().name(),HttpStatus.OK);
         }catch (Exception e){
             //Throw an exception
             throw new BadRequestException("There is no employee in the database with this email");
@@ -156,6 +156,17 @@ public class EmployeeController {
     }
 
 
+    //Get employee by id
+    @GetMapping("/{id}")
+    public ResponseEntity<EmployeeResponse> getOneEmployeeByEmail(@PathVariable long id){
+        try {
+            //Get the employee and Return the response
+            return new ResponseEntity<>(employeeService.getEmployeeById(id),HttpStatus.OK);
+        }catch (Exception e){
+            //Throw an exception
+            throw new BadRequestException("There is no employee in the database with this id");
+        }
+    }
 
     //Test Kafka
 //    @GetMapping("/test")

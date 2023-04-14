@@ -36,7 +36,7 @@ public class ProfessionController {
             //Return a success response
             return responseHandler.generateResponse("Profession created successfully", HttpStatus.OK);
         }catch (Exception e ){
-            throw new BadRequestException("Error creating profession");
+            throw new BadRequestException(e.getMessage());
         }
     }
 

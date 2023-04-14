@@ -45,7 +45,6 @@ public class SpaceDto {
                 .name(this.getName())
                 .description(this.getDescription())
                 .unitHeadId(this.getUnitHeadId())
-                .professions(this.getProfessions().stream().map(ProfessionDto::to_entity).toList())
                 .build();
     }
 

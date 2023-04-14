@@ -50,4 +50,22 @@ public class ChatGroupController {
 
         }
     }
+
+    // get chat group
+    @GetMapping("/chatGroup")
+    public ResponseEntity<ChatGroupDto> getChatGroup(@RequestParam("id") long id, @RequestParam("unitType") UnitType unitType){
+        try{
+
+            //Bring the chatgroup
+            ChatGroupDto chatGroupDto = chatGroupService.getChatGroupByIduAndUnitType(id,unitType);
+
+
+            // Return the list of messages
+            return new ResponseEntity<>(chatGroupDto, HttpStatus.OK);
+
+        }catch (Exception e){
+            throw new BadRequestException(e.getMessage());
+
+        }
+    }
 }

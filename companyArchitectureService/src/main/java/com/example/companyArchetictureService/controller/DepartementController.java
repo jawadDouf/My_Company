@@ -36,7 +36,7 @@ public class DepartementController {
             //Return a success response
             return responseHandler.generateResponse("Departement created successfully", HttpStatus.OK);
         } catch (Exception e) {
-            throw new BadRequestException("Error creating profession");
+            throw new BadRequestException(e.getMessage());
         }
     }
 

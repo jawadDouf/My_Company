@@ -45,9 +45,13 @@ public class Security_Config {
                 .and()
                 .authorizeHttpRequests(
                         auth -> auth
+                                .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 //                                .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                                 .requestMatchers(HttpMethod.POST,"/api/authentification/**")
                                 .permitAll()
+                                .requestMatchers("/chatApplication/**").permitAll()
+                                .requestMatchers(HttpMethod.GET,"/api/employees/**").permitAll()
+                                .requestMatchers(HttpMethod.GET,"/api/chatgroups/**").permitAll()
                                 .requestMatchers(HttpMethod.POST,"/api/**").hasRole(RoleType.ADMIN.name())
                                 .requestMatchers(HttpMethod.POST,"/api/**").hasRole(RoleType.UNITADMIN.name())
                                 .anyRequest().authenticated()

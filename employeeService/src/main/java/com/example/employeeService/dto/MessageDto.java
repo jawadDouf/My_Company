@@ -31,6 +31,10 @@ public class MessageDto {
 
     private long chatGroupId;
 
+    private String fSender;
+
+    private String lSender;
+
 
     //Convert dto to entity
     public Message to_entity(){
@@ -48,6 +52,8 @@ public class MessageDto {
                 .message(message.getMessage())
                 .senderId(message.getSenderId())
                 .chatGroupId(message.getChatGroupId())
+                .fSender(message.getSender().getFirst_name())
+                .lSender(message.getSender().getLast_name())
                 .build();
     }
 }

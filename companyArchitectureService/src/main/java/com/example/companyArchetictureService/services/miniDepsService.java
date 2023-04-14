@@ -1,8 +1,11 @@
 package com.example.companyArchetictureService.services;
 
 
+import com.example.common.events.companyUnitsEvents.UnitCreatedEvent;
+import com.example.common.events.helpers.UnitType;
 import com.example.companyArchetictureService.dto.DepartementDto;
 import com.example.companyArchetictureService.dto.MiniDepsDto;
+import com.example.companyArchetictureService.kafka.producer.UnitsEventProducer;
 import com.example.companyArchetictureService.model.entities.Departement;
 import com.example.companyArchetictureService.model.entities.MiniDeps;
 import org.springframework.stereotype.Service;
@@ -21,20 +24,35 @@ public class miniDepsService {
 
     private MiniDepsDto miniDepsDto;
 
+    private UnitsEventProducer unitsEventProducer;
 
-    public miniDepsService(miniDepsRepo miniDepsRepo, MiniDepsDto miniDepsDto) {
+
+    public miniDepsService(com.example.companyArchetictureService.repositories.miniDepsRepo miniDepsRepo, MiniDepsDto miniDepsDto, UnitsEventProducer unitsEventProducer) {
         this.miniDepsRepo = miniDepsRepo;
         this.miniDepsDto = miniDepsDto;
+        this.unitsEventProducer = unitsEventProducer;
     }
-
-
 
     //Create a new miniDeps
     public MiniDeps createMiniDeps(MiniDepsDto miniDepsDto){
         //Convert dto to entity
-        MiniDeps miniDeps = miniDepsDto.to_entity();
-        //Save the entity
-        return miniDepsRepo.save(miniDeps);
+        MiniDeps miniDeps1 = miniDepsDto.to_entity();
+        //Add the departement to database and store it in a variable
+        MiniDeps miniDeps = miniDepsRepo.save(miniDeps1);
+
+        //Create a new event
+        UnitCreatedEvent unitCreatedEvent = new UnitCreatedEvent();
+
+        unitCreatedEvent.setUnitId(miniDeps.getId());
+
+        unitCreatedEvent.setUnit(UnitType.MINIDEPS);
+        unitCreatedEvent.setName(miniDeps.getName());
+        unitCreatedEvent.setDescription(miniDeps.getDescription());
+
+        //Send the event to the employee service to create a new chatGrouo
+        unitCreatedEvent.setDescription("departement.getDescription()");
+        //Save the profession object
+        return miniDeps;
     }
 
 
