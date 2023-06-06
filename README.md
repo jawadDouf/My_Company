@@ -5,7 +5,7 @@ This GitHub project is a microservices-based application designed to manage comp
 
 ## Technologies used :
 ### - Project Archetecture : 
-1. **Microservices** :
+1. **Microservices** : This project follows a microservices architecture, where software applications are developed as a collection of small, independent services that communicate with each other. It consists of two main microservices: the [Employees Service](employeeService), responsible for managing employees and facilitating communication between them, and the [CompanyUnits Service](companyArchitectureService), which focuses on managing company units.  
 
 
 ### - Backend :
