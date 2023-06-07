@@ -9,10 +9,10 @@ This GitHub project is a microservices-based application designed to manage comp
 
 
 ### - Backend :
-1. **Spring Boot** : Spring Boot is a powerful framework that simplifies the development of Java applications. It provides a streamlined platform for building stand-alone, production-grade Spring-based applications with minimal configuration.
-2. **Spring Security** : Spring Security is a widely-used framework for adding authentication and authorization capabilities to your applications. It provides a comprehensive set of tools and APIs to secure your microservices, including features like user authentication, role-based access control, and protection against common security vulnerabilities. 
-3. **Spring Cloud** : 
-4. **Spring Data Jpa(Implementation: Hibernate)** : Spring Data JPA is a part of the Spring Data project that simplifies working with relational databases in Java applications
+1. **Spring Boot** : In this project, I leveraged the power of Spring Boot, a robust framework that greatly simplifies Java application development. By utilizing Spring Boot as the backend framework.
+2. **Spring Security** : Spring Security is a widely-used framework for adding authentication and authorization capabilities to your applications. I used it to secure my microservices.
+3. **Spring Cloud** :  Spring Cloud is a framework that helps developers build and deploy scalable, distributed systems. It provides a set of tools and libraries for implementing common patterns and building blocks required for microservices architecture .such as service discovery and Api gateway which i used in this project .
+4. **Spring Data Jpa(Implementation: Hibernate)** : Spring Data JPA is a part of the Spring Data project that simplifies working with relational databases in Java applications .
 
 
 ### - Front-End :
