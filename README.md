@@ -16,14 +16,14 @@ This GitHub project is a microservices-based application designed to manage comp
 
 
 ### - Front-End :
-1. **Angular** :
-2. **TypeScript** :
-3. **Tailwind** : 
+1. **Angular** : Angular is a JavaScript framework for building dynamic web applications.
+2. **TypeScript** : TypeScript is a typed superset of JavaScript.
+3. **Tailwind** : Tailwind CSS is a utility-first CSS framework that provides a collection of pre-built CSS classes
 
 
 ### - Api(Communication between Front-end and Back-end) :
-1. **WebSockets** :
-2. **Rest Api** : 
+1. **WebSockets** : WebSockets is a communication protocol that provides full-duplex, real-time communication between a client (usually a web browser) and a server. And by using this protocol i created the chat between the employees .
+2. **Rest Api** : REST (Representational State Transfer) API is an architectural style for designing networked applications.
 
 ### - Communication between microservices :
 1. **Kafka** :
