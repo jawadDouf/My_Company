@@ -26,8 +26,8 @@ This GitHub project is a microservices-based application designed to manage comp
 2. **Rest Api** : REST (Representational State Transfer) API is an architectural style for designing networked applications.
 
 ### - Communication between microservices :
-1. **Kafka** :
-2. **WebClient** : 
+1. **Kafka** : Kafka is an open-source distributed event streaming platform , Kafka is typically used for building real-time data pipelines and streaming applications. It allows you to publish, subscribe, store, and process streams of records , And i used it to transfer data(events) between the microservices (Asynchronously).
+2. **WebClient** : A WebClient is a class in various programming frameworks and libraries that provides functionality for making HTTP requests from client applications.And i used it to transfer data(events) between the microservices (Synchronously) .
 
   
  
